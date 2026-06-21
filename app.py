@@ -1,9 +1,10 @@
 import streamlit as st
-import pandas as pd
+import os
 import joblib
 
-model = joblib.load("models/risk_model.pkl")
+st.write(os.listdir("models"))  
 
+model = joblib.load("models/risk_model.pkl")
 st.title("Credit Risk Assessment System")
 
 st.subheader("Loan Applicant Details")
